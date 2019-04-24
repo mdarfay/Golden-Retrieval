@@ -1,0 +1,352 @@
+.I 1
+.W
+The average student or researcher has difficulty in comprehending the
+vocabulary of information retrieval.  It appears important that this
+new field be understood before it is to be fully accepted.  What basic
+articles would provide an understanding of the various important aspects
+of the information storage and retrieval?
+
+.I 2
+.W
+What are the characteristics of MEDLARS (Medical Literature Analysis
+and Retrieval System) project which has been undertaken by the
+National Library of Medicine?  How does it index current medical
+journals and of what relation is this indexing system to Index Medicus?
+What are the major components of the MEDLARS project and its major operating
+details?
+
+.I 3
+.T
+Directions in Library Networking
+.A
+Avram, H.D.
+McCallum, S.H.
+.W
+    Bibliographic control before and after MARC is reviewed.  The capability
+of keying into online systems brought an interdependence among libraries,
+the service centers that mediate between them, and the large utilities that
+process and distribute data.  From this has developed the basic network
+structure among libraries in the United States.  The independent development
+of major networks has brought problems in standardization and coordination.
+The authors point out that while technology has led toward centralization
+of automated library services, new developments are now pushing toward
+decentralization.  Coordination is a requirement to avoid fragmentation in
+this new environment.
+.B
+(JASIS, Vol. 31, No. 6, November 1980, pp. 438-444)
+
+.I 4
+.W
+How can the computer be used in medical science for diagnostic and
+clinical record keeping purposes?  Have any programs of automation
+been tried in hospitals?  If so, what have been the results?
+What problems have been encountered in the use of automation in
+medicine?  For what purposes can an automated system of clinical
+records be used?  What are other possible uses of the computer in medicine?
+
+.I 5
+.W
+Information dissemination by journals and periodicals.
+.I 6
+.T
+Approximate String Matching
+.A
+Hall, P.A.V.
+Dowling, G.R.
+.W
+    Approximate matching of strings is reviewed with the aim of
+surveying techniques suitable for finding an item in a database when
+there may be a spelling mistake or other error in the keyword.  The
+methods found are classified as either equivalence or similarity problems.
+Equivalence problems are seen to be readily solved using canonical forms.
+For similarity problems difference measures are surveyed, with a full
+description of the well-established dynamic programming method relating
+this to the approach using probabilities and likelihoods.  Searches for
+approximate matches in large sets using a difference function are seen to
+be an open problem still, though several promising ideas have been
+suggested.  Approximate matching (error correction) during parsing is
+briefly reviewed.
+.B
+(Computing Surveys, Vol. 12, No. 4, December 1980, pp. 381-402)
+
+.I 7
+.W
+What possibilities are there for verbal communication between computers and
+humans, that is, communication via the spoken word?
+.I 8
+.W
+The standard method of finding information in today's libraries is
+through the use of the alphabetically arranged card catalog or the
+classified catalog based on a classification system such as the DC or
+LC.  Can these systems be modified for use with automated information
+retrieval?
+
+.I 9
+.W
+Most resources have been spent on applying information retrieval
+techniques to the physical and medical sciences.  But, has information
+retrieval been used at all in the natural sciences, social sciences,
+and humanities?  If so, what have been some of the problems which have
+been encountered with these subject areas and how have they been
+solved, if at all?  Have the characteristics of these subject areas
+necessitated the development of new information retrieval techniques?
+What are the prospcts for future machine control in these areas?
+
+.I 10
+.W
+How much do information retrieval and dissemination systems, as well as
+automated libraries, cost?
+Are they worth it to the researcher and to industry?
+.I 11
+.W
+Information systems in the physical sciences.
+.I 12
+.W
+Government supported agencies and projects dealing with information dissemination.
+.I 13
+.T
+The Interface Between Computerized Retrieval Systems and Micrographic
+Retrieval Systems
+.A
+McMurdo, G.
+.W
+    This paper notes the benefits accruing from interaction between computerized
+retrieval systems and micrographic retrieval systems.  It reviews current state
+of automated micrographic retrieval technology.  The conclusion is that with a
+combination of advances in communications technology, and sophisticated indexing
+input from libraries and information scientists, the new generation of automated
+micrographs devices may constitute the on-line document retrieval systems of the
+future.
+.B
+(Journal of Information Science I, 1980, pp. 345-349)
+
+.I 14
+.W
+Retrieval systems which provide for the automated transmission of information
+to the user from a distance.
+.I 15
+.T
+Algorithms for Processing Partial Match Queries Using Word Fragments
+.A
+Alagar, V.S.
+.W
+    Algorithms are given to process partially specified queries in a
+compressed database system.  The proposed methods handle effectively
+queries that use either whole words or word fragments as language elements.
+The methods are compared and critically evaluated in terms of the design
+and retrieval costs.  The analyses show that the method which exploits the
+interdependence of fragments as well as the relevance of fragments to
+records in the file has maximum design cost and least retrieval cost.
+.B
+(Inform. Systems, Vol. 5, No. 4, April 1980, pp. 323-332)
+
+.I 16
+.T
+Interacting in Natural Language With Artificial Systems:  The Donau Project
+.A
+Guida, G.
+Somalvico, M.
+.W
+    This paper is intended to propose a new methodological approach to
+the conception and development of natural language understanding systems.
+This new contribution is supported by the design, implementation, and
+experimentation of DONAU:  a general purpose domain oriented natural
+language understanding system developed and presently running at the Milan
+Polytechnic Artificial Intelligence Project.  The system is based on a two
+level modular architecture intended to overcome the lack of flexibility and
+generality often pointed out in many existing systems, and to facilitate
+the exchange of results and actual experiences between different projects.
+The horizontal level allows an independent and parallel development of the
+single segments of the system (syntactic analyser, information extractor,
+legality controller).  The vertical level ensures the possibility of changing
+(enlarging or redefining) the definition of the semantic domain on which each
+particular version of the system is oriented and specialized in a simple,
+incremental, and user-oriented way.  In the paper the general architecture of
+the system and the mode of operation of each segment are illustrated in
+detail.  Linguistic models, knowledge representation, and parsing algorithms
+are described and illustrated by means of selected examples.  Performance
+evaluations of the system in the application version on data base inquiry are
+reported and discussed.  Promising directions for future research are presented
+in the conclusions.
+.B
+(Inform. Systems, Vol. 5, NO. 4, February 1980, pp. 333-344)
+
+.I 17
+.T
+A Program for Machine-Mediated Searching
+.A
+Toliver, D.
+.W
+    A technique of online instruction and assistance to bibliographic data
+base searchers called Individualized Instruction for Data Access (IIDA) is
+being developed by Drexel University.  IIDA assists searchers by providing
+feedback based on real-time analysis while searches are being performed.
+Extensive help facilities which draw on this analysis are available to
+users.  Much of the project's experimental work, as described elsewhere,
+is concerned with the process of searching and the behavior of searchers.
+This paper will largely address itself to the project's computer system, which
+is being developed by subcontract with the Franklin Institute's Science
+Information Services.
+.B
+(Information Processing & Management, Vol. 17, No. 2, 1981, pp. 61-68)
+
+.I 18
+.W
+Amount of use of books in libraries.
+Relation to need for automated information systems .
+.I 19
+.W
+What is the need for information consolidation, evaluation, and retrieval in
+scientific research?
+.I 20
+.W
+The need to provide personnel for the information field.
+.I 21
+.W
+What criteria have been developed for the objective evaluation of information
+retrieval and dissemination systems?
+.I 22
+.W
+What systems incorporate multiprogramming or remote stations in information
+retrieval?  What will be the extent of their use in the future?
+.I 23
+.T
+Feature Comparison of an In-House Information Retrieval System With a
+Commercial Search Service
+.A
+Boyle, S.O.
+Miller, A.P.
+.W
+    A commercially available online search was used as a standard for
+comparative searching and evaluation of an in-house information system
+based on automatic indexing.  System features were identified and
+evaluated on the basis of their usefulness in various kinds of searching,
+their ease in implementation, and how they are influenced by differences
+in user type or specific applications.  Some common features of the
+commercial system, such as online instruction, user-specified print formats,
+dictionary display, and truncation, are seen to be unnecessary or
+impractical for the in-house system.  In designing the in-house system,
+therefore, detald consideration must be given to the applications,
+operating environment, and real user needs.  While a commercial system can
+serve as a useful standard for comparative evaluation, one must be
+careful not to attempt to duplicate it blindly in-house.
+.B
+(JASIS, Vol. 31, No. 5, September 1980, pp. 309-317)
+
+.I 24
+.W
+Is alphabetical ordering of material considered to be a useful tool in
+information retrieval?  What studies have been done to compare the
+effectiveness of alphabetical order with other organization schemes?
+Is there a generally accepted form of arranging material in
+alphabetical order, and is there an easy way of achieving this form
+without going to a great amount of effort?
+
+.I 25
+.T
+Cooperation and Competition Among Library Networks
+.A
+Robinson, B.M.
+.W
+    Recenty technological advances and the success of OCLC, Inc. has led
+to the emergence of three additional nonprofit library networks:  the
+Research Libraries Information Network (RLIN) of the Research Libraries
+Group, Inc., the University of Toronto Library Automation System (UTLAS),
+and the Washington Library Network (WLN).  This paper examines the economic
+and technological factors affecting the evolution of these networks and
+also explores the role of those state and regional (multistate) networks
+that broker OCLC services.  The competitive and cooperative nature of
+network relationships is a major theme of the discussion.
+.B
+(JASIS, Vol. 31, No. 6, November 1980, pp. 413-424)
+
+.I 26
+.T
+A Fast Procedure for the Calculation of Similarity Coefficients in
+in Automatic Classification
+.A
+Willett, P.
+.W
+    A fast algorithm is described for comparing the lists of terms representing
+documents in automatic classification experiments.  The speed of the procedure
+arises from the fact that all of the non-zero-valued coefficicents for a given
+document are identified together, using an inverted file to the terms in the
+document collection.  The complexity and running time of the algorithm are
+compared with previously described procedures.
+.B
+(Information Processing & Management, Vol. 17, No. 2, 1981, pp. 53-60)
+.I 27
+.T
+The Technology of Library and Information Networks
+.A
+Epstein, H.
+.W
+    Current online library network technology is described, including the
+physical and functional aspects of networks.  Three types of networks are
+distinguished:  search service (e.g., SDC, Lockheed), customized service
+that provide bibliographic files (e.g., OCLC, Inc., RLIN), and service
+center (e.g., NELINET, INCOLSA).  It is predicted that as technology
+evolves more services will be provided outside the library directly to the
+user through his home or office.
+.B
+(JASIS, Vol. 31, No. 6, November 1980, pp. 425-437)
+
+.I 28
+.W
+Is there any use for traditional classification schemes - DDC, UDC, LC,
+etc. - in information retrieval systems?  If there is, which scheme
+appears most suited to machine use and where has it been applied?
+If there is not, why are these classification schemes irrelevant?
+Has research shown that a subject classification of knowledge is
+completely unnecessary in machine systems? Or, have new schemes
+been devised which appear to be more suited to machine use?
+
+.I 29
+.T
+The Combined Use of Bibliographic Coupling and Cocitation for Document
+Retrieval
+.A
+Bichteler, J.
+Eaton, E.A. III
+.W
+    A linkage similarity measure which takes into account both the bibliographic
+coupling of documents and their cocitations (both cited and citing papers)
+produced improved document retrieval over a measure based only on
+bibliographic coupling.  The test collection consisted of 1712 papers whose
+relevance to specific queries had been judged by users.  To evaluate the
+effect of using cocitation data, we calculated for each query two measures
+of similarity between each relevant paper and every other paper retrieved.
+Papers were then sorted by the similarity measures, producing two ordered
+lists.  We then compared the resulting predictions of relevance, partial
+relevance, and non-relevance to the user's evaluations of the same papers.
+Overall, the change from the bibliographic coupling measure to the linkage
+similarity measure, representing the introduction of cocitation data,
+resulted in better retrieval performance.
+.B
+(JASIS, Vol. 31, No. 4, July 1980, pp. 278-282)
+
+.I 30
+.T
+A Translating Computer Interface for End-User Operation of
+Heterogeneous Retrieval Systems.  II. Evaluations
+.A
+Marcus, R.S.
+Reintjes, J.F.
+.W
+    The evaluation of the concept of a translating compuyter interface for
+simplifying operation of multiple, heterogenous online bibliographic
+retrieval systems has been undertaken.  An experimental retrieval system,
+named CONIT, was built and tested under controlled conditions with
+inexperienced end users.  A detailed analysis of the experimental usages
+showed that users were able to master interface operation sufficiently well
+to find relevant document references.  Success was attributed, in part,
+to a simple command language, adequate online instruction, and a simplified
+natural-language, keyword/stem approach to searching.  It is concluded that
+operational interfaces of the type studied can provide for increased usability
+of existing system in a cost effective manner, especially for searchers.
+Furthermore, more advanced interfaces based on improved instruction and
+automated search strategy techniques could further enhance retrieval
+effectiveness for a wide class of users.
+.B
+(JASIS, Vol. 32, No. 4, July 1981, pp. 304-317)
+
