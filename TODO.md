@@ -1,6 +1,8 @@
 # Installer des packages
 `pip3 install nompackage [--user]` (pour mettre dans notre home utiliser l'option)
 
+#Ressources utiles
+https://machinelearningmastery.com/clean-text-machine-learning-python/
 
 # Scripts à faire
 ## Script 1 : Indexation
