@@ -16,7 +16,7 @@ Faire l'indexation des documents et des requêtes. Créer des vecteurs qui repr�
 - ~~Lister les mots de tous les documents (faire un lexique)~~
 - ~~Virer la stopword list~~
 - Enlever les mots les plus fréquents (**tuning possible ici**)
-- checker les mots contenus dans tous les documents (ou la majorité)
+- ~~checker les mots contenus dans tous les documents (ou la majorité)~~
 
 ## Script 2 : Moteur de recherche
 Utilise les index créés pour faire la relation entre requêtes et documents 
