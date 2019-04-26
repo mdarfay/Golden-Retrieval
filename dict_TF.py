@@ -32,12 +32,12 @@ def removeSpecialChar(line):
 def removeCommonWords(dictio, list, percent):
     todel = []
     for word in dictio:
-        present = 1.
+        present = 0
         for doc in list:
-            if word not in doc:
-                present -= 1/len(list)
-        if present>=percent:
-            print(word)
+            if word in doc.split():
+                present += 1
+        if present >= percent*len(list):
+            print(word + ' ' + str(present))
             todel.append(word)
     for wordtodel in todel:
         del dictio[wordtodel]  #supprime l'entrée si le mot est dans tous les documents
@@ -65,14 +65,19 @@ docs.pop(0)         # supprime le 1er document vide
 
 
 for doc in docs:
+    doc = doc.lower()
     doc = removeSpecialChar(doc)      # suppression des car. spéciaux dans les lignes
     for word in doc.split():
         if word not in stopwordslist:   # si le mot n'est pas commun :
-            add(dico, word.lower())     # ajout dans le lexique du mot en minuscules (à modifier plus tard)
+            add(dico, word)     # ajout dans le lexique du mot en minuscules (à modifier plus tard)
 
 
 # Retire les mots qui sont dans 80% des textes
-dico = removeCommonWords(dico,docs,0.8)     # le dernier paramètre ajuste la sensibilité du remove
+# Très long et useless a priori, seulement une vingtaine de mots au dessus des 300 occurences
+#dico = removeCommonWords(dico,docs,0.9)     # le dernier paramètre ajuste la sensibilité du remove
+
+#print(stopwordslist)
+#print(sorted(dico.values())) # pour voir les plus grandes occurences
 
 for w in sorted(dico):      # écriture dans le fichier, dans l'ordre alphabétique
     lexi.write(w + "," + str(dico[w]) + "\n")

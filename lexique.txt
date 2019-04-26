@@ -478,7 +478,6 @@ abnormality,1
 abolished,1
 abolishing,1
 abortive,1
-about,4
 aboutness,1
 abrades,1
 abreast,1
@@ -716,10 +715,8 @@ affords,1
 aforementioned,2
 africa,2
 african,3
-after,17
 afterthoughts,1
 afterwards,1
-again,4
 agard,1
 agdoc,1
 age,42
@@ -757,6 +754,7 @@ aj,1
 ajt,2
 akin,1
 aktiengesellschaft,1
+al,3
 ala,8
 alan,1
 alarming,1
@@ -783,7 +781,6 @@ alien,1
 alienation,1
 alike,1
 alkyl,1
-all,33
 allan,1
 allay,1
 alleged,1
@@ -828,7 +825,6 @@ altmann,2
 alto,2
 altogether,2
 always,24
-am,1
 amalgamating,1
 amass,1
 ambiguities,1
@@ -935,7 +931,6 @@ antiquity,1
 antitumor,1
 antonyms,1
 anubis,1
-any,2
 anyhow,1
 anyone,6
 anything,4
@@ -1018,7 +1013,6 @@ archivists,2
 ardrey,1
 ardreys,1
 arduous,1
-are,3
 area,88
 areas,88
 arena,1
@@ -1252,6 +1246,7 @@ away,5
 awesome,1
 awkward,1
 axiomatic,2
+b,26
 ba,3
 babel,1
 baboons,4
@@ -1314,7 +1309,6 @@ bear,1
 bearing,8
 bears,2
 became,20
-because,17
 beckman,1
 become,62
 becomes,19
@@ -1323,7 +1317,6 @@ bed,2
 beds,1
 bees,1
 befoff,1
-before,7
 beg,1
 began,19
 begin,8
@@ -1376,7 +1369,6 @@ besides,6
 best,47
 betaine,1
 better,55
-between,17
 beverly,1
 bewildering,2
 beyond,18
@@ -1497,7 +1489,6 @@ borrowing,6
 bossuat,1
 boston,4
 botany,1
-both,15
 bothered,1
 bottomless,2
 bought,1
@@ -1605,17 +1596,17 @@ burton,2
 bush,2
 business,34
 busy,3
-but,49
 butterwick,1
 buy,6
 buyers,1
 buying,1
 bx,1
 bxln1,1
-by,20
 bypassing,1
 byproduct,1
 bytes,2
+c,20
+ca,34
 cab,2
 cabinets,1
 cable,13
@@ -1647,7 +1638,6 @@ campaigned,1
 camps,1
 campus,12
 campuses,1
-can,1
 canada,5
 canadas,1
 canadian,6
@@ -1745,6 +1735,7 @@ cbacand,1
 cbas,1
 cc,1
 cdc,1
+ce,1
 cease,2
 ceased,3
 cell,4
@@ -1984,6 +1975,7 @@ clustered,2
 clustering,16
 clusters,20
 cnic,1
+co,48
 coaches,1
 coast,2
 coates,1
@@ -2634,6 +2626,7 @@ crystallized,1
 crystallography,1
 csc,3
 csum,1
+ct,7
 ctcc,1
 ctotal,1
 cuddly,1
@@ -2719,6 +2712,7 @@ ddc,4
 ddcindustry,1
 ddcs,2
 ddts,2
+de,4
 deacidification,2
 dead,4
 deadliest,1
@@ -3191,7 +3185,6 @@ divisions,6
 divorced,1
 dk,2
 dna,2
-do,5
 doc,1
 doctoral,3
 doctorates,1
@@ -3205,7 +3198,6 @@ documented,6
 documentquery,1
 documents,220
 dod,1
-does,1
 dogmas,1
 dollar,4
 dollars,4
@@ -3290,7 +3282,6 @@ duplicate,5
 duplicated,2
 duplication,17
 durable,1
-during,19
 durkheim,1
 dust,1
 dusting,1
@@ -3304,8 +3295,8 @@ dynamic,15
 dynamically,1
 dynamicism,1
 dynamics,5
+e,4
 e6ll,1
-each,23
 eales,1
 ear,1
 earlier,40
@@ -3337,6 +3328,7 @@ economies,4
 economist,2
 economists,7
 economy,15
+ed,2
 edgar,1
 edit,2
 edited,7
@@ -3421,6 +3413,7 @@ elsewhere,15
 elucidate,1
 elucidated,2
 elusive,1
+em,1
 emanate,1
 emanating,3
 embedded,2
@@ -3859,6 +3852,7 @@ extremum,1
 exudes,1
 exxon,1
 eye,11
+f,1
 f2d,1
 fabric,1
 face,11
@@ -3966,7 +3960,6 @@ fenfluramine,1
 fertile,1
 fertilization,1
 festivals,1
-few,3
 fewer,8
 fiab,1
 fiche,2
@@ -4055,6 +4048,7 @@ flows,7
 fluid,1
 flung,1
 fn,1
+fo,1
 focal,2
 foci,1
 focus,18
@@ -4198,7 +4192,6 @@ friendship,1
 frightening,1
 fringes,1
 fritz,1
-from,17
 fron,3
 front,4
 frontier,1
@@ -4239,7 +4232,6 @@ furnish,10
 furnished,4
 furnishes,3
 furniture,1
-further,7
 furtherance,1
 furthering,2
 furthermore,9
@@ -4252,6 +4244,7 @@ futures,1
 fuzzification,1
 fuzzy,34
 fx,1
+g,2
 gain,11
 gained,9
 gaining,2
@@ -4441,6 +4434,7 @@ guidelines,9
 guides,6
 guiding,2
 guy,2
+h,4
 haas,1
 habit,3
 habitats,1
@@ -4501,7 +4495,6 @@ hash,2
 hassles,1
 hastings,1
 haunted,1
-have,1
 hawaii,1
 haykin,1
 hdb,1
@@ -4545,7 +4538,6 @@ henkle,1
 hens,1
 hensel,1
 herald,1
-here,6
 herein,4
 heretofore,1
 heritage,1
@@ -4577,7 +4569,6 @@ hindrances,2
 hindsight,1
 hinge,1
 hippie,1
-his,4
 hist,1
 historian,2
 historians,8
@@ -4637,7 +4628,6 @@ houses,1
 housewife,1
 housing,6
 housman,1
-how,19
 however,115
 huber,1
 hud,1
@@ -4674,6 +4664,7 @@ ibm,18
 ibm370,1
 ibms,2
 ibsr,1
+ic,3
 ici,1
 icrs,2
 idc,7
@@ -4698,7 +4689,7 @@ identity,3
 ideological,1
 idiom,1
 idiosyncracies,1
-if,33
+ie,33
 ifla,12
 ignorance,2
 ignore,4
@@ -5158,7 +5149,6 @@ intimacy,1
 intimate,2
 intimated,1
 intimately,1
-into,1
 intolerance,1
 intractable,2
 intraindividual,1
@@ -5272,7 +5262,6 @@ item,32
 items,56
 iterative,3
 iteratively,1
-its,37
 iupac,4
 iv,7
 ivory,2
@@ -5333,7 +5322,6 @@ jumps,3
 june,15
 junior,8
 juniors,1
-just,3
 justice,2
 justifiable,2
 justification,6
@@ -5409,6 +5397,7 @@ kuhnian,4
 kuhns,5
 kwic,17
 kwoc,2
+l,9
 l967,1
 l970,1
 l972,1
@@ -6117,7 +6106,6 @@ mooers,1
 moral,1
 morale,1
 morality,1
-more,15
 moreover,11
 morn,1
 morphemes,2
@@ -6125,7 +6113,6 @@ morphologically,1
 morphology,3
 morris,1
 moscow,2
-most,21
 mostly,6
 motion,5
 motivated,6
@@ -6181,13 +6168,13 @@ mutilating,1
 mutilations,1
 mutual,11
 mx,3
-my,17
 mysterious,1
 mystical,1
 mystification,1
 mystique,1
 myth,1
 myths,1
+n,15
 n1,1
 naive,7
 naivete,1
@@ -6313,7 +6300,6 @@ nll,7
 nllst,1
 nlm,8
 nmr,2
-no,15
 noaaerl,1
 nobel,7
 noble,1
@@ -6364,7 +6350,6 @@ nonsubstance,2
 nontrivial,1
 nonusers,2
 nonverbal,2
-nor,2
 norm,1
 normal,11
 normalization,1
@@ -6375,7 +6360,6 @@ norms,8
 north,6
 northeastern,1
 northern,1
-not,13
 notable,2
 notably,5
 notated,1
@@ -6405,7 +6389,6 @@ novelty,3
 november,10
 novice,3
 novices,1
-now,6
 nowhere,1
 nrlsi,2
 nrpra,1
@@ -6522,12 +6505,10 @@ omission,2
 omissions,1
 omitted,6
 oms,1
-once,2
 one,451
 ones,18
 ongoing,4
 online,8
-only,20
 onslaught,1
 onto,1
 opaque,2
@@ -6628,14 +6609,11 @@ ostensibly,1
 osti,4
 ostis,1
 ot,1
-other,25
 others,46
 otherwise,11
 otlet,2
 ottawa,1
 ought,2
-our,24
-out,4
 outcome,6
 outcomes,5
 outer,1
@@ -6655,7 +6633,6 @@ outstanding,3
 outstripped,1
 outworn,1
 ovchinnikov,1
-over,16
 overall,29
 overburdened,3
 overcame,1
@@ -6698,6 +6675,7 @@ ownership,1
 owns,1
 oxen,1
 oxidative,1
+p,8
 pace,7
 pacific,1
 pack,1
@@ -7608,6 +7586,7 @@ quote,2
 quoted,2
 quotes,1
 qv,1
+r,23
 race,2
 radable,1
 radar,1
@@ -8346,6 +8325,7 @@ sdc,7
 sdcs,1
 sdi,71
 sds,2
+se,1
 sea,1
 search,255
 searchable,6
@@ -8503,7 +8483,6 @@ sharpen,2
 sharpest,1
 shattering,1
 shawnee,1
-she,3
 shed,2
 sheds,3
 sheffield,3
@@ -8538,7 +8517,6 @@ shortcomings,5
 shorter,3
 shortest,3
 shortly,1
-should,1
 show,44
 showed,16
 showing,12
@@ -8650,7 +8628,6 @@ smallest,3
 smart,14
 smithsonian,1
 smre,1
-so,3
 soar,1
 soaring,1
 sober,1
@@ -8689,7 +8666,6 @@ solve,10
 solved,9
 solvent,1
 solving,14
-some,87
 somebody,1
 someday,1
 somehow,5
@@ -9037,7 +9013,6 @@ successful,15
 successfully,10
 successive,7
 succinate,1
-such,27
 suddenly,2
 suffer,1
 suffering,1
@@ -9229,6 +9204,7 @@ taxonomists,1
 taxonomy,11
 taxons,2
 taxpayers,2
+te,3
 teach,7
 teachable,2
 teacher,3
@@ -9311,17 +9287,13 @@ textbook,13
 textbooks,7
 texts,28
 textual,9
+th,3
 tha,2
-than,1
 thanks,2
-that,13
 theatre,1
-their,25
-them,2
 thematic,3
 theme,15
 themes,4
-then,3
 theology,1
 theorem,9
 theoretic,4
@@ -9333,7 +9305,6 @@ theorists,2
 theory,222
 theorys,1
 ther,1
-there,76
 thereby,6
 therefore,71
 therefrom,1
@@ -9345,10 +9316,8 @@ thesaural,2
 thesauri,23
 thesaurofacet,3
 thesaurus,68
-these,108
 theses,5
 thesis,7
-they,37
 thing,13
 things,6
 think,14
@@ -9363,7 +9332,6 @@ thirds,2
 thirteen,1
 thirteenth,1
 thirty,12
-this,534
 thom,1
 thomas,2
 thompson,1
@@ -9371,7 +9339,6 @@ thorough,8
 thoroughgoing,1
 thoroughly,7
 thoroughness,1
-those,6
 though,35
 thought,25
 thoughtful,1
@@ -9390,7 +9357,6 @@ threshold,6
 threw,1
 thrive,1
 thriving,1
-through,8
 throughly,1
 throughout,30
 throughput,2
@@ -9398,6 +9364,7 @@ throw,1
 throws,1
 thrust,2
 thus,65
+ti,1
 tide,1
 tie,3
 tied,4
@@ -9427,7 +9394,6 @@ tolerance,2
 tomorrow,3
 tone,2
 tongue,1
-too,4
 took,8
 tool,39
 tools,33
@@ -9562,6 +9528,7 @@ trustees,1
 truth,3
 try,16
 trying,7
+ts,2
 tss,2
 tube,3
 tug,1
@@ -9602,6 +9569,7 @@ typing,4
 typographic,1
 typological,2
 typology,5
+u,4
 ubc,2
 ubiquitous,1
 ucla,4
@@ -9645,7 +9613,6 @@ uncritical,2
 undecided,1
 undefined,1
 undeniably,2
-under,2
 underdeveloped,2
 undergoing,2
 undergone,1
@@ -9777,7 +9744,6 @@ unsuccessful,1
 unsuspected,1
 untagged,1
 untenable,1
-until,1
 untrained,2
 untrammeled,1
 untutored,1
@@ -9809,6 +9775,7 @@ urgently,1
 urges,2
 urgings,1
 ursinus,1
+us,65
 usa,3
 usability,1
 usable,7
@@ -9839,6 +9806,7 @@ utilizes,4
 utilizing,11
 utopian,1
 utterly,1
+v,14
 vacancies,1
 vacations,1
 vague,2
@@ -9907,7 +9875,6 @@ versions,8
 versus,8
 vertebrates,1
 vertical,1
-very,1
 vested,2
 veteran,1
 veterinarians,1
@@ -10015,7 +9982,6 @@ waveguide,1
 way,104
 ways,58
 wcl,1
-we,90
 weak,2
 weaker,2
 weakness,1
@@ -10046,36 +10012,28 @@ wellcome,2
 wells,4
 wendell,1
 went,1
-were,1
 wertheimer,1
 wessel,1
 west,9
 western,13
 weswesser,2
 wet,1
-what,45
 whatever,13
 whats,1
 wheel,1
-when,33
 whenever,1
-where,7
 whereas,11
 whereby,6
 wherein,1
 wherever,2
 whether,51
-which,1
 whichever,1
-while,27
 whilst,3
 white,3
-who,1
 whole,44
 wholeheartedly,1
 wholly,3
 whose,35
-why,7
 wide,33
 widely,30
 widen,1
@@ -10088,7 +10046,6 @@ wiegendrucke,1
 wilcoxen,1
 wilhelm,1
 wilkins,2
-will,1
 williams,4
 williamss,1
 willing,5
@@ -10109,7 +10066,6 @@ wishes,2
 wishing,5
 wisps,1
 wiswesser,14
-with,28
 withdraw,1
 wither,1
 withers,1
@@ -10183,7 +10139,6 @@ yield,14
 yielded,4
 yields,6
 york,13
-you,1
 young,9
 younger,1
 youth,1
