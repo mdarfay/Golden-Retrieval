@@ -1,8 +1,10 @@
 import re
-from collections import defaultdict
+from tools import *
 
 # Importation du lexique
-lexique = open("./lexique.txt").read().splitlines() #recupere les mots sans les \n
+lexique_file = open("./lexique.txt")
+lexique = lexique_file.read().splitlines() #recupere les mots sans les \n
+lexique_file.close()
 
 
 # Ouverture des documents à parcourir
@@ -14,16 +16,6 @@ def extract_w_line(mots, line):
 	for mot in line.split():
 		if mot in lexique:
 			mots[mot] = "1"	#TODO 1 = score du mot, ici juste un boolean
-		
-			
-# Inverse un double dictionnaire
-def reverse_double_dict(dico):
-	flipped = defaultdict(dict)
-	for key, val in dico.items():
-		for subkey, subval in val.items():
-		    flipped[subkey][key] = subval
-		    
-	return flipped
 			
 			
 # Ecrit proprement le double dict dans le fichier de sortie
@@ -57,10 +49,12 @@ def main_indexing(path, extension):
 		else:
 			extract_w_line(mots, line)
 
+	data.close()
+
 	# Inverse l'index pour le stockage à l'envers
 	reverse_index = reverse_double_dict(index)
 	
-    # Ecriture de l'index final
+  # Ecriture de l'index final
 	res = open("index."+extension, "w")
 	write_dict(res, reverse_index)
 	res.close()
