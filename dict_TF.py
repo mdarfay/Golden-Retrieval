@@ -80,5 +80,6 @@ for doc in docs:
 #print(sorted(dico.values())) # pour voir les plus grandes occurences
 
 for w in sorted(dico):      # écriture dans le fichier, dans l'ordre alphabétique
-    lexi.write(w + "," + str(dico[w]) + "\n")
+    #lexi.write(w + "," + str(dico[w]) + "\n") #version avec la fréquence
+    lexi.write(w+"\n")	#version avec juste les mots
 
