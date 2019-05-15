@@ -6,22 +6,36 @@ from tools import *
 
 # Importation du lexique
 def readLexique():
-	lexique_file = open("../Generated_files/lexique.txt")
+	lexique_file = open("../Generated_files/lexique")
 	lex = lexique_file.read().splitlines() #recupere les mots_doc sans les \n
 	lexique = {}
 	for line in lex:
 		line = line.split(",")
-		lexique[line[0]] = line[1]
+		lexique[line[0]] = int(line[1])
 	lexique_file.close()
 	return lexique
-
+	
 
 # Extrait les mots_doc du lexique de chaque ligne et stocke dans le dictionnaire du doc courant
-def extract_w_doc(mots_doc, doc):
+def extract_w_doc(mots_doc, doc, nbDocs):
+	words_doc_occ = {}	# ensemble des mots du doc et leur occurence associée
+	total_words = 0
+	# Mettre tous les mots du doc et leur occurence
 	for ligne in doc:
 		for mot in ligne.split():
+			total_words += 1	# on compte le nombre de mots total
 			if mot in lexique:
-				mots_doc[mot] = "1"	#TODO 1 = score du mot, ici juste un boolean
+				if mot not in words_doc_occ:
+					words_doc_occ[mot] = 1
+				else:
+					words_doc_occ[mot] += 1
+	
+	# Parcours tous les mots differents et les ajoute au dict de mots du doc avec calcul de TFIDF => Voir wikipedia
+	for mot in words_doc_occ:
+		freqMot = words_doc_occ[mot] / total_words	# nombre d'occurences du mot / nombre de mots total
+		IDF = nbDocs / lexique[mot]
+		
+		mots_doc[mot] = str(freqMot * IDF)			
 				
 			
 # Ecrit proprement le double dict dans le fichier de sortie
@@ -60,7 +74,7 @@ def main_indexing(path, extension):
 			texte_doc.append(line.rstrip('\n'))
 	
 	for num in docs:	# clé de docs = num des doc
-		extract_w_doc(index[num], docs[num])	# on envoie le dico de mots associé au doc ET le document en entier
+		extract_w_doc(index[num], docs[num], len(docs))	# on envoie le dico de mots associé au doc ET le document en entier
 	
 	data.close()
 
@@ -78,7 +92,7 @@ def main_indexing(path, extension):
 lexique = readLexique()
 
 # Ouverture des documents à parcourir
-docs = "../Data_files/CISI.ALLnettoye"
+docs = "../Data_files/CISI.ALLnettoye_normalized"
 queries = "../Data_files/CISI_dev.QRY"
 
 """
