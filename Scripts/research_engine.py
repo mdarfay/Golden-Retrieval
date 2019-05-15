@@ -4,11 +4,11 @@ from tools import *
 import operator
 
 # Importation des fichiers index 
-index_docs_file = open("./index.DOCS")
+index_docs_file = open("../Generated_files/index.DOCS")
 index_docs_tab = index_docs_file.read().splitlines()
 index_docs_file.close()
 
-index_qrys_file = open("./index.QRYS")
+index_qrys_file = open("../Generated_files/index.QRYS")
 index_qrys_tab = index_qrys_file.read().splitlines()
 index_qrys_file.close()
 
@@ -63,7 +63,7 @@ for qry in index_qrys :
 
 
 # Ecriture dans un fichier des résultats 
-fichier = open("result","w")
+fichier = open("../Generated_Files/result.res","w")
 
 for qry in associations :
 	for doc in associations[qry] : 
