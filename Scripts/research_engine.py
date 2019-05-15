@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 from tools import *
 import operator
 
@@ -27,7 +29,7 @@ def rewrite_dict(tab) :
 
 
 # Produit scalaire entre un document et une requête :
-def scalar_product(doc : dict,qry : dict) : # doc et qry sont des dico de la forme {word : score ; word2 : score2 ; etc.}
+def scalar_product(doc : dict, qry : dict) : # doc et qry sont des dico de la forme {word : score ; word2 : score2 ; etc.}
 	result = 0
 	for word in doc :
 		if word in qry :

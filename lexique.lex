@@ -1,3 +1,0 @@
-cheval
-poney
-biche
