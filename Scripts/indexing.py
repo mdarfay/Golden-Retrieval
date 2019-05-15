@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import re
+import time
 from tools import *
 
 # Importation du lexique
-lexique_file = open("./lexique.txt")
+lexique_file = open("../Generated_files/lexique.txt")
 lexique = lexique_file.read().splitlines() #recupere les mots sans les \n
 lexique_file.close()
 
 
 # Ouverture des documents à parcourir
-docs = "./Data_files/CISI.ALLnettoye"
-queries = "./Data_files/CISI_dev.QRY"
+docs = "../Data_files/CISI.ALLnettoye"
+queries = "../Data_files/CISI_dev.QRY"
 
 # Extrait les mots du lexique de chaque ligne et stocke dans le dictionnaire du doc courant
 def extract_w_line(mots, line):
@@ -57,7 +58,7 @@ def main_indexing(path, extension):
 	reverse_index = reverse_double_dict(index)
 	
   # Ecriture de l'index final
-	res = open("index."+extension, "w")
+	res = open("../Generated_files/index."+extension, "w")
 	write_dict(res, reverse_index)
 	res.close()
 
@@ -66,8 +67,14 @@ def main_indexing(path, extension):
 # APPEL DU PROGRAMME SUR LES FICHIERS
 
 #main_indexing("./texttest", "TEST")
+startDocs = time.time()
 main_indexing(docs, "DOCS")
+endDocs = time.time()
+print("Index DOCS done, in : ", endDocs-startDocs, " seconds")
 main_indexing(queries, "QRYS")
+endQuery = time.time()
+print("Index QUERIES done, in : ", endQuery-endDocs, " seconds")
+print("Total exec time = ", endQuery-startDocs, " seconds")
 
 
 
