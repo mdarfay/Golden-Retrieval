@@ -6,7 +6,7 @@ from tools import *
 
 # Importation du lexique
 def readLexique():
-	lexique_file = open("../Generated_files/lexique")
+	lexique_file = open("../Generated_files/CISI.ALLnettoye_lexique")
 	lex = lexique_file.read().splitlines() #recupere les mots_doc sans les \n
 	lexique = {}
 	for line in lex:
@@ -92,7 +92,7 @@ def main_indexing(path, extension):
 lexique = readLexique()
 
 # Ouverture des documents à parcourir
-docs = "../Data_files/CISI.ALLnettoye_normalized"
+docs = "../Generated_files/CISI.ALLnettoye_normalized"
 queries = "../Data_files/CISI_dev.QRY"
 
 """
