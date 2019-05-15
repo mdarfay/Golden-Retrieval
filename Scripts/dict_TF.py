@@ -47,8 +47,8 @@ def removeCommonWords(dictio, list, percent):
 dico = dict()
 separator = ' '
 
-lexi = open('lexique.txt', 'w')
-data = open('./Data_files/CISI.ALLnettoye').readlines()
+lexi = open('../Generated_files/lexique.txt', 'w')
+data = open('../Data_files/CISI.ALLnettoye').readlines()
 #data = open('./texttest').readlines()       #for test
 docs = []   # liste de tous les documents, entête exclu
 doc = []    # liste des lignes d'un document
@@ -80,6 +80,6 @@ for doc in docs:
 #print(sorted(dico.values())) # pour voir les plus grandes occurences
 
 for w in sorted(dico):      # écriture dans le fichier, dans l'ordre alphabétique
-    #lexi.write(w + "," + str(dico[w]) + "\n") #version avec la fréquence
-    lexi.write(w+"\n")	#version avec juste les mots
+    lexi.write(w + "," + str(dico[w]) + "\n") #version avec la fréquence
+    #lexi.write(w+"\n")	#version avec juste les mots
 
