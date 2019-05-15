@@ -8,17 +8,29 @@ import nltk
 # Stopword list
 nltk.download("stopwords")
 from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
 stopwordslist = stopwords.words("english")
 stopwordslist.append("NaN")
 
 # regex pour les délimitations de documents
 regex = re.compile(r"\.I\s\d+\s$");
 
-def add(dictionnaire, ajout):
-    if ajout in dictionnaire:
-        dictionnaire[ajout] += 1
-    else:
-        dictionnaire[ajout] = 1
+#Parametre
+filename = '../Data_files/CISI.ALLnettoye'
+#filename = '../Generated_files/texttest'
+
+
+
+def add(dictionnaire, ajout,docs):
+    cpt=0
+    if ajout not in dictionnaire:
+        for doc in docs:
+            found = False
+            if ajout in doc.split():
+                found = True
+            if found:
+                cpt += 1 
+        dictionnaire[ajout] = cpt
 
 # table de traduction pour enlever les car. spéciaux, remplace les '-' par des espaces
 table = str.maketrans('-',' ',"!\"#$%&'()*+,./:;<=>?@[\]^_`{|}~")  # table de traduction pour enlever les car. spéciaux
@@ -29,7 +41,7 @@ def removeSpecialChar(line):
         new_line += (word.translate(table))
     return new_line
 
-def removeCommonWords(dictio, list, percent):
+def removeFrequentWords(dictio, list, percent):
     todel = []
     for word in dictio:
         present = 0
@@ -43,12 +55,40 @@ def removeCommonWords(dictio, list, percent):
         del dictio[wordtodel]  #supprime l'entrée si le mot est dans tous les documents
     return dictio
 
+def removeCommonWords(text):
+    string=''
+    if text not in stopwordslist:
+        string +=text+' '
+    return string
+
+def normalizeText(filename):
+    print(filename)
+    
+    output = open('../Generated_files/'+filename+'_normalized','w')
+    input=open(filename, 'r')
+
+    text = input.readlines()
+    porter = PorterStemmer()
+
+    for line in text:
+        if not(re.search(regex,line)):
+            newline = removeSpecialChar(line)
+            newline = newline.lower()
+            newline = removeCommonWords(newline)
+            for word in newline.split():
+                stemmed = porter.stem(word)
+                output.write(stemmed + " ")
+            output.write('\n')
+        else:
+            output.write(line)
+
 
 dico = dict()
 separator = ' '
 
-lexi = open('../Generated_files/lexique.txt', 'w')
-data = open('../Data_files/CISI.ALLnettoye').readlines()
+lexi = open('../Generated_files/lexique', 'w')
+normalizeText(filename)
+data = open(filename+'_normalized').readlines()
 #data = open('./texttest').readlines()       #for test
 docs = []   # liste de tous les documents, entête exclu
 doc = []    # liste des lignes d'un document
@@ -65,21 +105,10 @@ docs.pop(0)         # supprime le 1er document vide
 
 
 for doc in docs:
-    doc = doc.lower()
-    doc = removeSpecialChar(doc)      # suppression des car. spéciaux dans les lignes
     for word in doc.split():
-        if word not in stopwordslist:   # si le mot n'est pas commun :
-            add(dico, word)     # ajout dans le lexique du mot en minuscules (à modifier plus tard)
+        add(dico, word, docs)     # ajout dans le lexique du mot en minuscules (à modifier plus tard)
 
-
-# Retire les mots qui sont dans 80% des textes
-# Très long et useless a priori, seulement une vingtaine de mots au dessus des 300 occurences
-#dico = removeCommonWords(dico,docs,0.9)     # le dernier paramètre ajuste la sensibilité du remove
-
-#print(stopwordslist)
-#print(sorted(dico.values())) # pour voir les plus grandes occurences
 
 for w in sorted(dico):      # écriture dans le fichier, dans l'ordre alphabétique
     lexi.write(w + "," + str(dico[w]) + "\n") #version avec la fréquence
     #lexi.write(w+"\n")	#version avec juste les mots
-
