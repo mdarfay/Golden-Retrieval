@@ -7,7 +7,7 @@ from math import sqrt
 
 
 #TODO : Paramètre à ajuster 
-SEUIL = 0.14
+SEUIL = 0.005
 
 
 
@@ -88,7 +88,7 @@ for qry,dic_qry in index_qrys.items() :
 
 
 # Ecriture dans un fichier des résultats 
-fichier = open("../Generated_Files/result.res","w")
+fichier = open("../Generated_files/result.res","w")
 
 
 for qry in sorted(associations) :
