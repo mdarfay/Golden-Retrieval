@@ -3,11 +3,15 @@
 from tools import *
 import operator
 from math import sqrt
+import sys
 
 
 
 #TODO : Paramètre à ajuster 
 SEUIL = 0.005
+
+if ( len(sys.argv) == 2):
+	SEUIL = float(sys.argv[1])
 
 
 

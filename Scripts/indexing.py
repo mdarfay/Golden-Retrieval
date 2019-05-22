@@ -3,6 +3,18 @@
 import re
 import time
 from tools import *
+import sys
+
+# TODO : fixer les poids de TF et IDF /!\ il s'agit de puissances /!\
+weightTF = 1
+weightIDF = 1
+
+if ( len(sys.argv) == 3):
+	weightTF = float(sys.argv[1])
+	weightIDF = float(sys.argv[2])
+	
+
+
 
 # Importation du lexique
 def readLexique():
@@ -11,7 +23,7 @@ def readLexique():
 	lexique = {}
 	for line in lex:
 		line = line.split(",")
-		lexique[line[0]] = int(line[1])
+		lexique[line[0]] = float(line[1])
 	lexique_file.close()
 	return lexique
 	
@@ -31,11 +43,12 @@ def extract_w_doc(mots_doc, doc, nbDocs):
 					words_doc_occ[mot] += 1
 	
 	# Parcours tous les mots differents et les ajoute au dict de mots du doc avec calcul de TFIDF => Voir wikipedia
+	# FIXME : Calcul du score du mot
 	for mot in words_doc_occ:
 		freqMot = words_doc_occ[mot] / total_words	# nombre d'occurences du mot / nombre de mots total
 		IDF = nbDocs / lexique[mot]
 		
-		mots_doc[mot] = str(freqMot * IDF)			
+		mots_doc[mot] = str( (freqMot**weightTF) * (IDF**weightIDF) )			
 				
 			
 # Ecrit proprement le double dict dans le fichier de sortie

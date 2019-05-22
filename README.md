@@ -16,3 +16,11 @@ On peut générer les indexs "dans l'ordre", par document, avec chaque mot, mais
 
 ## Résultat = result.res
 `requete, document pertinent, score du document`
+
+
+###
+./eval.pl CISI_dev.REL ../Generated_files/result.res | tail -n2 | head -n1 | awk '{print $13}'
+
+13 = F mesure (must prio)
+15 = précision à 1
+17 = précision à 5
