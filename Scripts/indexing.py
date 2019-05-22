@@ -46,9 +46,11 @@ def extract_w_doc(mots_doc, doc, nbDocs):
 	# FIXME : Calcul du score du mot
 	for mot in words_doc_occ:
 		freqMot = words_doc_occ[mot] / total_words	# nombre d'occurences du mot / nombre de mots total
+		TF = freqMot
+		
 		IDF = nbDocs / lexique[mot]
 		
-		mots_doc[mot] = str( (freqMot**weightTF) * (IDF**weightIDF) )			
+		mots_doc[mot] = str( (TF ** weightTF) * (IDF ** weightIDF) )			
 				
 			
 # Ecrit proprement le double dict dans le fichier de sortie
