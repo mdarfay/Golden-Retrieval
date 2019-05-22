@@ -21,5 +21,4 @@ Faire l'indexation des documents et des requêtes. Créer des vecteurs qui repr�
 ## Script 2 : Moteur de recherche
 Utilise les index créés pour faire la relation entre requêtes et documents 
 
-## Lancer l'évaluation
-`./eval.pl verite hypothese`
+

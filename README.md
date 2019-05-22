@@ -2,6 +2,34 @@
 
 Text Information Retrieval project of 3INFO TALEO
 
+# Utilité des scripts 
+
+normal_lexiquing.py : 
+- crée le lexique (d'après les textes leminisés)
+- lemisation des documents
+- lemisation des requêtes
+
+indexing.py :
+- crée l'index des documents
+- crée l'index des requêtes
+
+research_engine.py :
+- croise les index pour rendre les meilleures associations (requête,document)
+
+tools.py :
+- fonction d'inversion de dictionnaire
+
+controller.py :
+- lance indexing.py puis research_engine.py 
+- doit avoir 3 paramètres : seuil, poidsTF, poidsIDF
+- lance ensuite eval.pl et renvoie les résultats obtenus
+
+dogDogGo.py : 
+- lance controller.py en faisant varier les 3 paramètres
+- récupère F-mesure, Précision1, Précision5
+- rend les meilleurs paramètres 
+
+
 # Fichiers générés
 ## Lexique *lexique.txt*
 Le lexique contient chaque mot utile du lexique, ainsi que le nombre de documents dans lequel le mot apparaît.
