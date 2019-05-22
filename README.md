@@ -52,3 +52,6 @@ On peut générer les indexs "dans l'ordre", par document, avec chaque mot, mais
 13 = F mesure (must prio)
 15 = précision à 1
 17 = précision à 5
+
+POS TAGGING? (séparer verbes et autres types de mots), et sinon changer le TF/IDF
+TF : au lieu de compter nb de mots, juste regarder 0/1 peut être mieux

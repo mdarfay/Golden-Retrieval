@@ -14,3 +14,4 @@ else:
 	
 os.system("python3 indexing.py "+poidsTF+" "+poidsIDF)
 os.system("python3 research_engine.py "+seuil)
+os.system("./eval.pl ../Data_files/CISI_dev.REL ../Generated_files/result.res")
