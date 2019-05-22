@@ -16,6 +16,10 @@ stopwordslist.append("NaN")
 # regex pour les délimitations de documents
 regex = re.compile(r"\.I\s\d+\s$");
 
+annee = re.compile(r"^[12]\d\d\d$")
+
+chiffre = re.compile(r"\d")
+
 def add(dictionnaire, ajout, docs):
     cpt = 0
     if ajout not in dictionnaire:
@@ -29,8 +33,7 @@ def add(dictionnaire, ajout, docs):
 
 
 # table de traduction pour enlever les car. spéciaux, remplace les '-' par des espaces
-table = str.maketrans('-', ' ',
-                      "!\"#$%&'()*+,./:;<=>?@[\]^_`{|}~")  # table de traduction pour enlever les car. spéciaux
+table = str.maketrans('-,()', '    ',"!\"#$%&'*+./:;<=>?@[\]^_`{|}~")  # table de traduction pour enlever les car. spéciaux
 
 
 def removeSpecialChar(line):
@@ -108,7 +111,11 @@ def generateLexique(filename):
 
     for doc in docs:
         for word in doc.split():
-            add(dico, word, docs)  # ajout dans le lexique du mot en minuscules (à modifier plus tard)
+            if re.search(chiffre,word):
+                if re.search(annee,word):
+                    add(dico, word, docs)  # ajout dans le lexique du mot en minuscules (à modifier plus tard)
+            else:
+                add(dico, word, docs)
 
     for w in sorted(dico):  # écriture dans le fichier, dans l'ordre alphabétique
         lexi.write(w + "," + str(dico[w]) + "\n")  # version avec la fréquence
@@ -117,5 +124,6 @@ def generateLexique(filename):
 
 #normalizeText("CISI.ALLnettoye")
 generateLexique("CISI.ALLnettoye")
+normalizeText("CISI_dev.QRY")
 
 
