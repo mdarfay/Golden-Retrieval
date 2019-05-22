@@ -7,7 +7,7 @@ $HYP=$ARGV[1];
 
 if(!defined($GOLD) || !defined($HYP)){die("use: <goldstandart> <hypothesis>\n");}
 
-print STDERR "Load goldstandart\n";
+#print STDERR "Load goldstandart\n";
 open(GOLD,"$GOLD") || die("Can't open $GOLD\n");
 while(<GOLD>)
 {
@@ -23,7 +23,7 @@ while(<GOLD>)
 }
 close(GOLD);
 
-print STDERR "Load hypothesis\n";
+#print STDERR "Load hypothesis\n";
 open(HYP,"$HYP") || die("Can't open $HYP\n");
 while(<HYP>)
 {
@@ -39,7 +39,7 @@ while(<HYP>)
 }
 close(HYP);
 
-print STDERR "Compute error statistics\n";
+#print STDERR "Compute error statistics\n";
 print STDOUT "__________________________________________________________________________________________________\n";
 print STDOUT "| Query  | Hypothesis | GoldSantard | Correct | Precision |   Recall  |    F1    |  P\@1  |  P\@5  |\n";
 print STDOUT "|--------|------------|-------------|---------|-----------|-----------|----------|-------|-------|\n";
