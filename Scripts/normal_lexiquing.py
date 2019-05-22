@@ -122,8 +122,12 @@ def generateLexique(filename):
         # lexi.write(w+"\n")	#version avec juste les mots
     print("Lexique done")
 
+
+# Main
+normalizeText("CISI_dev.QRY")
 #normalizeText("CISI.ALLnettoye")
 generateLexique("CISI.ALLnettoye")
 normalizeText("CISI_dev.QRY")
+
 
 
