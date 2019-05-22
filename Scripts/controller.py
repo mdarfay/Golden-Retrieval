@@ -12,4 +12,5 @@ else:
 
 
 	
-
+os.system("python3 indexing.py "+poidsTF+" "+poidsIDF)
+os.system("python3 research_engine.py "+seuil)
