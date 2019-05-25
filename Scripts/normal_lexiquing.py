@@ -95,7 +95,7 @@ def generateLexique(filename):
     lexi = open('../Generated_files/'+filename+'_lexique', 'w')
     normalizeText(filename)
     data = open('../Generated_files/'+filename + '_normalized').readlines()
-    # data = open('./texttest').readlines()       #for test
+    data = open('./texttest').readlines()       #for test
     docs = []  # liste de tous les documents, entête exclu
     doc = []  # liste des lignes d'un document
 
@@ -118,8 +118,10 @@ def generateLexique(filename):
                 add(dico, word, docs)
 
     for w in sorted(dico):  # écriture dans le fichier, dans l'ordre alphabétique
-        lexi.write(w + "," + str(dico[w]) + "\n")  # version avec la fréquence
+        if dico[w]:
+            lexi.write(w + "," + str(dico[w]) + "\n")  # version avec la fréquence
         # lexi.write(w+"\n")	#version avec juste les mots
+    print(sorted(dico.values()))
     print("Lexique done")
 
 
@@ -127,7 +129,6 @@ def generateLexique(filename):
 normalizeText("CISI_dev.QRY")
 #normalizeText("CISI.ALLnettoye")
 generateLexique("CISI.ALLnettoye")
-normalizeText("CISI_dev.QRY")
 
 
 

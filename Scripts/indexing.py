@@ -8,13 +8,18 @@ import sys
 # TODO : fixer les poids de TF et IDF /!\ il s'agit de puissances /!\
 weightTF = 1
 weightIDF = 1
+freqInf = 0
+freqSup = 1400
 
-if ( len(sys.argv) == 3):
+if len(sys.argv) == 3:
 	weightTF = float(sys.argv[1])
 	weightIDF = float(sys.argv[2])
 	
-
-
+if len(sys.argv) == 5:
+	weightTF = float(sys.argv[1])
+	weightIDF = float(sys.argv[2])
+	freqInf = float(sys.argv[3])
+	freqSup = float(sys.argv[4])
 
 # Importation du lexique
 def readLexique():
@@ -23,7 +28,8 @@ def readLexique():
 	lexique = {}
 	for line in lex:
 		line = line.split(",")
-		lexique[line[0]] = float(line[1])
+		if freqInf < float(line[1]) < freqSup:
+			lexique[line[0]] = float(line[1])
 	lexique_file.close()
 	return lexique
 	

@@ -21,7 +21,7 @@ tools.py :
 
 controller.py :
 - lance indexing.py puis research_engine.py 
-- doit avoir 3 paramètres : seuil, poidsTF, poidsIDF
+- doit avoir 5 paramètres : seuil, poidsTF, poidsIDF, freqInf, freqSup
 - lance ensuite eval.pl et renvoie les résultats obtenus
 
 dogDogGo.py : 
@@ -55,3 +55,6 @@ On peut générer les indexs "dans l'ordre", par document, avec chaque mot, mais
 
 POS TAGGING? (séparer verbes et autres types de mots), et sinon changer le TF/IDF
 TF : au lieu de compter nb de mots, juste regarder 0/1 peut être mieux
+
+
+controller.py 0.0055 5 1 0 180 -> 21.1%
