@@ -10,15 +10,16 @@ regex = re.compile(r"(.+)%")
 bestSeuil = 0
 bestTF = 1
 bestIDF = 1
+bestFreqMax = 1020
 bestF = 0
 
 # Boucle de variation du poidsTF entre 1 et 5 (pas de 0.1)
-for poidsTF in np.arange(1,3,0.1):
-    # Boucle de variation de poids IDF entre 1 et 5 (pas de 0.1)
-    for poidsIDF in np.arange(1,3,0.1):
+for poidsTF in np.arange(3,5,1):
+    # Boucle de variation de la freq max
+    for freqMax in np.arange(100,300,10):
         # Boucle de variation du seuil entre 0 et 1 (pas de 0.0005)
-        for seuil in np.arange(0,1,(0.1)**(poidsIDF+poidsTF)):
-            readFmesure = os.popen("python3 controller.py "+str(seuil)+" "+str(poidsTF)+" "+str(poidsIDF)+" | tail -n2 | head -n1 | awk \'{print $13}\'", "r").read()
+        for seuil in np.arange(0.001,0.008,0.0005):
+            readFmesure = os.popen("python3 controller.py "+str(seuil)+" "+str(poidsTF)+" 1 0 "+ str(freqMax) +" | tail -n2 | head -n1 | awk \'{print $13}\'", "r").read()
             if(re.match(regex,readFmesure) != None):
                 Fmesure = float(re.match(regex, readFmesure).group(1))
                 #print(Fmesure)
@@ -26,6 +27,6 @@ for poidsTF in np.arange(1,3,0.1):
                     bestF= Fmesure
                     bestSeuil = seuil
                     bestTF = poidsTF
-                    bestIDF = poidsIDF
+                    bestFreqMax = freqMax
 
-print("Best Fmesure : "+str(bestF)+" with seuil="+str(bestSeuil)+" poidsTF="+str(bestTF)+" poidsIDF="+str(bestIDF))
+print("Best Fmesure : "+str(bestF)+" with seuil="+str(bestSeuil)+" poidsTF="+str(bestTF)+" freqMax="+str(bestFreqMax))

@@ -14,6 +14,6 @@ else:
 
 
 	
-os.system("python indexing.py "+poidsTF+" "+poidsIDF+" "+freqInf+" "+freqSup)
-os.system("python research_engine.py "+seuil)
+os.system("python3 indexing.py "+poidsTF+" "+poidsIDF+" "+freqInf+" "+freqSup)
+os.system("python3 research_engine.py "+seuil)
 os.system("perl eval.pl ../Data_files/CISI_dev.REL ../Generated_files/result.res")
