@@ -58,3 +58,5 @@ TF : au lieu de compter nb de mots, juste regarder 0/1 peut être mieux
 
 
 controller.py 0.0055 5 1 0 180 -> 21.1%
+
+controller.py 0.006200000000000003 5 1 0 180 -> 21.5%
