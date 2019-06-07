@@ -122,15 +122,15 @@ def main_indexing(path, extension):
 			dic_titles[num_doc] = "" 	# on initialise l'entrée dans le dico, en mettant une chaîne vide, remplacée à l'itération suivante par le vrai titre
 		
 		elif re.search(regexTitre, line):
-			is_title = 1	# si on trouve un .T, le titre est à la/les prochaine ligne
+			is_title = 1				# si on trouve un .T, le titre est à la/les prochaine ligne
 
-		elif is_title == 1:		#on a passé une balise .T
+		elif is_title == 1:				#on a passé une balise .T
 			if re.search(regexW, line):			# si on arrive a la balise suivante
 				is_title = -1
 				#print(title)
-				dic_titles[num_doc] = line.rstrip('\n')  # on ajoute le titre correspondant dans le dico de titres
+				dic_titles[num_doc] = title  # on ajoute le titre correspondant dans le dico de titres
 				title = ""
-			else:								#s i on est encore dans la balise .T
+			else:								#si on est encore dans la balise .T
 				title += (line.rstrip('\n'))
 
 		else:
