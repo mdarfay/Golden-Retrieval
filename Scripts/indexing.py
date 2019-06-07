@@ -91,6 +91,8 @@ def write_dict(fichier, dico):
 def main_indexing(path, extension):
 	# regex pour les délimitations de documents
 	regex = re.compile(r"\.I\s(\d+)\s$")
+	regexTitre = re.compile(r"^\.T$")
+	regexW = re.compile(r"^\.[W]$")
 	  
 	# Separation de tous les documents
 	data = open(path)
@@ -99,10 +101,12 @@ def main_indexing(path, extension):
 	docs = {}	# dico de tous les docs : { num : [texte_doc] }
 	texte_doc = "" 
 	mots_doc = {}	# liste des lignes d'un document
-	num_doc = -1
+	num_doc = -1	# -1
 	
 	dic_titles = {} # FIXME dictionnaire des titres des docs = première ligne : { n° doc : "Titre", ... }
-	is_title = -1	# FIXME boolean utilisé pour le repérage du titre lors du parcours du doc
+	is_title = -1	# FIXME boolean utilisé pour le repérage du titre lors du parcours du doc :
+					# 1 -> à la prochaine ligne
+	numTitle = -1
 
 	# sépare les différents documents dans la liste docs et rempli leur dict de mots_doc associé
 	for line in data:
@@ -114,15 +118,20 @@ def main_indexing(path, extension):
 			texte_doc = []
 			docs[num_doc] = texte_doc
 			
-			is_title = num_doc # FIXME la prochaine ligne lue sera le titre du document (on vient d'en lire son numéro)
+			numTitle = num_doc # FIXME la prochaine ligne lue sera le titre du document (on vient d'en lire son numéro)
+			is_title = -1
 			dic_titles[num_doc] = "" 	# FIXME on initialise l'entrée dans le dico, en mettant une chaîne vide, remplacée à l'itération suivante par le vrai titre
 		
-		elif is_title != -1 :
-			#print(line)
+		elif re.search(regexTitre, line):
+			is_title = 1	# si on trouve un .T, le titre est à la/les prochaine ligne
+
+		elif is_title == 1:
+			print(line)
 			dic_titles[is_title] = line.rstrip('\n')	# FIXME on ajoute le titre correspondant dans le dico de titres
-			is_title = -1 	# FIXME on reset, on a trouvé le titre de ce doc là
 			
 		else:
+			if re.search(regexW, line):
+				is_title = -1
 			texte_doc.append(line.rstrip('\n'))
 	
 	for num in docs:	# clé de docs = num des doc
