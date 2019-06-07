@@ -146,7 +146,7 @@ lexique = readLexique("../Generated_files/CISI.ALLnettoye_lexique")
 
 # Ouverture des documents à parcourir
 docs = "../Generated_files/CISI.ALLnettoye_normalized"
-queries = "../Generated_files/CISI.QRY_normalized"
+queries = "../Generated_files/CISI_dev.QRY_normalized"
 
 """
 main_indexing("../Generated_files/texttest_normalized", "TEST")

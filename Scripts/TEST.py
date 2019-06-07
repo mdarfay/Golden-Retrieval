@@ -17,13 +17,13 @@ import numpy as np
 
 cpt = 0
 
-
 # Boucle de variation du poidsTF entre 1 et 5 (pas de 0.1)
-for poidsTF in np.arange(6,7,0.5):
+for poidsTF in np.arange(1, 5, 1):  # 1 5 1
     # Boucle de variation de la freq max
-    for freqMax in np.arange(100,300,10):
+    for poidsTitre in np.arange(1, 50, 1):  # 1 100 2
         # Boucle de variation du seuil entre 0 et 1 (pas de 0.0005)
-        for seuil in np.arange(0.005,0.008,0.0001):
+        for seuil in np.arange(0.004, 0.006, 0.0005):  # 0.004 0.008 0.0005
+
             cpt=cpt+1
 
 print(cpt)

@@ -17,11 +17,11 @@ count = 0
 
 
 # Boucle de variation du poidsTF entre 1 et 5 (pas de 0.1)
-for poidsTF in np.arange(1,5,1):	# 1 5 1
+for poidsTF in np.arange(1, 5, 1):  # 1 5 1
     # Boucle de variation de la freq max
-    for poidsTitre in np.arange(1,100,1):	# 1 100 2
+    for poidsTitre in np.arange(1, 50, 1):  # 1 100 2
         # Boucle de variation du seuil entre 0 et 1 (pas de 0.0005)
-        for seuil in np.arange(0.004,0.008,0.0005):		#0.004 0.008 0.0005
+        for seuil in np.arange(0.004, 0.006, 0.0005):  # 0.004 0.008 0.0005
             
             count += 1
             readFmesure = os.popen("python3 controller.py "+str(seuil)+" "+str(poidsTF)+" 1 0 180 " + str(poidsTitre) +" | tail -n2 | head -n1 | awk \'{print $13}\'", "r").read()

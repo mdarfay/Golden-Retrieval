@@ -143,9 +143,11 @@ def generateLexique(filename):
 
 # Main
 
-normalizeText("CISI.QRY")
-generateLexique("CISI.QRY")
-#normalizeText("CISI_dev.QRY")
+#normalizeText("CISI.QRY")
+#generateLexique("CISI.QRY")
+
+normalizeText("CISI_dev.QRY")
+generateLexique("CISI_dev.QRY")
 
 
 #normalizeText("CISI.ALLnettoye")
