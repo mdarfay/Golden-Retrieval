@@ -16,7 +16,7 @@ stopwordslist.append("NaN")
 # regex pour les délimitations de documents
 regex = re.compile(r"\.I\s\d+\s$");
 
-regexBWAT = re.compile(r"\.[BWAT]")
+regexBWT = re.compile(r"\.[BWT]")
 
 regexA = re.compile(r"^\.A$")
 
@@ -80,22 +80,25 @@ def normalizeText(filename):
     text = input.readlines()
     porter = PorterStemmer()
 
-    author = False
+    isAuthor = False
 
     for line in text:
         if re.search(regexA,line):
-            author = True
+            isAuthor = True
         if re.search(regexW,line):
-            author = False
+            isAuthor = False
 
-        if not ((re.search(regex, line)) or (re.search(regexBWAT,line))) and not author:
-            newline = removeSpecialChar(line)
-            newline = newline.lower()
-            newline = removeCommonWords(newline)
-            for word in newline.split():
-                stemmed = porter.stem(word)
-                output.write(stemmed + " ")
-            output.write('\n')
+        if not ((re.search(regex, line)) or (re.search(regexBWT,line))):
+            if isAuthor:
+                output.write("")
+            else:
+                newline = removeSpecialChar(line)
+                newline = newline.lower()
+                newline = removeCommonWords(newline)
+                for word in newline.split():
+                    stemmed = porter.stem(word)
+                    output.write(stemmed + " ")
+                output.write('\n')
         else:
             output.write(line)
     print("Normalization done")
