@@ -27,7 +27,9 @@ Le système devait permettre d'optimiser deux mesures en particulier : la F-mesu
 | 3114          | 4573      | 718      | 15.7      | 23.1   | 18.7     | 29  | 25  |
 
 _Gold standard : Vérité terrain, dont il faut s'approcher._
+
 _Hypothèse : nombre de documents proposés par notre moteur._
+
 _Corrects : nombre de documents pertinents parmi ceux proposés._
 
 Les résultats obtenus sont très bons et correspondent à ceux attendus pour le projet.
@@ -35,23 +37,32 @@ Les résultats obtenus sont très bons et correspondent à ceux attendus pour le
 ## Fonctionnalités détaillées
 ### Création du lexique
 **Fichier concerné :** normal_lexiquing.py
+
 **Fichiers utilisés :** CISI_dev.QRY, CISI.ALLnettoye
+
 **Fichiers générés :** CISI_dev.QRY_normalized, CISI.ALLnettoye_normalized, CISI.ALLnettoye_lexique
+
 Les documents sont stematisés par l’outil [nltk](https://www.nltk.org/). Certains mots sont supprimés, tels que ceux apparaissant dans la _stopWordList_ et les nombres ne représentant pas des dates. Les occurences de chaque mot sont calculées pour ne conserver que les mots compris entre les 2 variables ajustables `freqMin` et `freqMax` (variables n’intervenant qu’au moment de l’indexing, pour ne pas générer à nouveau tout le lexique lors de leur ajustement).
 Les requêtes sont également stematisées puis réduites par la _stopWordList_ et la suppression de certains nombres.
 
 
 ### Méthode d’indexation
 **Fichier concerné :** indexing.py
+
 **Fichiers utilisés :** CISI_dev.QRY_normalized, CISI.ALLnettoye_normalized, CISI.ALLnettoye_lexique
+
 **Fichiers générés :** index.DOCS, index.QRYS
+
 Le lexique est récupéré et utilisé pour l’indexation. Les documents sont parcourus un par un et un dictionnaire avec les mots croisés et leur score leur est associé. La même chose est faite avec les requêtes. Les scores sont calculés par un système de TF.IDF qu’il est possible de pondérer par 3 variables : `weigthTF`, `weightIDF` et `weightTitle`. Ce dernier paramètre permet d’accorder plus d’importance aux mots présents dans le titre des documents et des requêtes.
 
 
 ### Mesure de similarité
 **Fichier concerné :** research_engine.py
+
 **Fichiers utilisés :** index.DOCS, index.QRYS
+
 **Fichier généré :** result.REL
+
 Les index des documents et des requêtes sont récupérés. Chaque requête est croisée à chaque document. Le cosinus de leur index respectif est calculé. Les meilleures associations _(requête,document)_ sont ensuite sélectionnées grâce à un seuil qu’il est possible d’ajuster.
 
 ### Outils utilisés
@@ -59,7 +70,9 @@ Les index des documents et des requêtes sont récupérés. Chaque requête est 
 
 **Internes :**
 • tools.py : contient une fonction d’inversion de double dictionnaire
+
 • controller.py : appelle indexing.py, research_engine.py puis eval.pl en passant en paramètres les variables ajustables ; permet d’ajuster les paramètres par une commande en voyant le résultat directement
+
 • DogDogGo.py : boucle sur controller.py en modifiant les valeurs des paramètres ; renvoie les paramètres associés au meilleur résultat de f_mesure obtenu
 
 13 = F mesure (must prio)
