@@ -26,9 +26,9 @@ Le système devait permettre d'optimiser deux mesures en particulier : la F-mesu
 |---------------|-----------|----------|-----------|--------|----------|-----|-----|
 | 3114          | 4573      | 718      | 15.7      | 23.1   | 18.7     | 29  | 25  |
 
-_Gold standard : Vérité terrain, dont il faut s'approcher.
-Hypothèse : nombre de documents proposés par notre moteur.
-Corrects : nombre de documents pertinents parmi ceux proposés._
+_Gold standard : Vérité terrain, dont il faut s'approcher._
+_Hypothèse : nombre de documents proposés par notre moteur._
+_Corrects : nombre de documents pertinents parmi ceux proposés._
 
 Les résultats obtenus sont très bons et correspondent à ceux attendus pour le projet.
 
@@ -56,6 +56,7 @@ Les index des documents et des requêtes sont récupérés. Chaque requête est 
 
 ### Outils utilisés
 **Externe :** [nltk](https://www.nltk.org/) pour la stematisation des documents et requêtes
+
 **Internes :**
 • tools.py : contient une fonction d’inversion de double dictionnaire
 • controller.py : appelle indexing.py, research_engine.py puis eval.pl en passant en paramètres les variables ajustables ; permet d’ajuster les paramètres par une commande en voyant le résultat directement
