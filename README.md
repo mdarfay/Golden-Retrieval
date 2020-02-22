@@ -10,7 +10,7 @@ L'objectif était de construire un petit moteur de recherche textuel, durant 3 s
 Un sous-ensemble de 30 requêtes était fourni afin d'ajuster les paramètres de notre système. L'ensemble complet des requêtes ayant servi à évaluer notre moteur de recherche était fourni seulement durant 24h, afin de paramétrer au mieux le moteur de recherche pour obtenir les meilleurs résultats possibles.
 Pour chaque requête, le système devait être en mesure de fournir une liste classée de documents par pertinence par rapport à la requête.
 
-_PS : Le nom du projet provient d'un mauvais jeu de mots basé sur la ressemblance entre "Retriever" et "Retrieval", respectivement issus de "Golden Retrieval" (race de chien) et de "Text Information Retrieval project" (nom du projet dans le cours)._
+_PS : Le nom du projet provient d'un mauvais jeu de mots basé sur la ressemblance entre "Retriever" et "Retrieval", respectivement issus de "Golden Retriever" (race de chien) et de "Text Information Retrieval project" (nom du projet dans le cours)._
 
 ## Résultats obtenus
 Le système était évalué sur plusieurs mesures, afin de déterminer son efficacité. Les mesures en questions sont:
